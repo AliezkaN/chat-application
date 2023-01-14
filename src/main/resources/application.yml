@@ -1,0 +1,5 @@
+rabbit:
+  host: "localhost"
+  port: 61613
+  login: "guest"
+  password: "guest"
