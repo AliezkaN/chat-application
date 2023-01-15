@@ -18,7 +18,7 @@ cd ..
 mvn package
 java -jar target/chat-application-0.0.1-SNAPSHOT.jar
 ```
-* Inspite of using mwn package you can start spring boot applicatin in IDE*
+* Inspite of using mvn package you can start spring boot applicatin in IDE*
 
 ## Second way to start application
 * Run RabbitMQ and Application using docker-compose file:
