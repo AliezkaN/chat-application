@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Websocket chat application</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container flex">
+        <div class="greeting-container">
+            <div class="greeting-text flex"> 
+                <p>Hello stranger!</p>
+            </div>
+            <hr>
+            <div class="username-input-container">
+                <div class="username-form-title flex">
+                    <h1>
+                        Type your name to get started
+                    </h1>
+                </div>
+                <form id="username-form">
+                    <div class="input-container">
+                        <input class="form-control" type="text" id="name" placeholder="Username" autocomplete="off" class="form-control" />
+                    </div>
+                    <div class="button-container">
+                        <button class="button" type="submit" role="button">Connect</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="chat-page" class="hidden">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <h2>Spring WebSocket Chat</h2>
+                </div>
+                <div class="connecting">
+                    Connecting...
+                </div>
+                <ul id="messageArea">
+        
+                </ul>
+                <form id="messageForm" name="messageForm" nameForm="messageForm">
+                    <div class="form-group">
+                        <div class="input-group clearfix">
+                            <input type="text" id="message" placeholder="Type a message..." autocomplete="off" class="form-control"/>
+                            <button type="submit" class="primary">Send</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <script src="/js/index.js"></script>
+</body>
+</html>
