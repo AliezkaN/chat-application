@@ -1,0 +1,29 @@
+services:
+  chat-application:
+    container_name: application
+    build:
+      /
+    ports:
+      - 8080:8080
+    environment:
+      - spring.profiles.active=rabbit
+    depends_on:
+      - rabbitmq-container
+    networks:
+      - rabbitmq-network
+
+  rabbitmq:
+    container_name: rabbitmq_container
+    hostname: rabbitmq-container
+    build:
+      /rabbit/
+    ports:
+      - 5672:5672
+      - 15672:15672
+      - 61613:61613
+    networks:
+      - rabbitmq-network
+
+networks:
+  rabbitmq-network:
+    driver: bridge

@@ -1,0 +1,5 @@
+rabbit:
+  host: "rabbitmq-container"
+  port: 61613
+  login: "guest"
+  password: "guest"
